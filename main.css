@@ -34,3 +34,6 @@ main {
     font-size: 14pt;
     font-family: 'Trebuchet MS';
 }
+a {
+    text-decoration: none;
+}
