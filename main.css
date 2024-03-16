@@ -1,0 +1,39 @@
+body {
+    background-color: lightblue;
+    color: maroon;
+    font-family: Arial;
+    margin: 0px;
+}
+header {
+    background-color: darkslateblue;
+    color: white;
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16pt;
+    font-family: 'Trebuchet MS';
+}
+footer {
+    background-color: darkslateblue;
+    color: white;
+    border-radius: 5px;
+    margin: 0px;
+    padding: 20px;
+    text-align: right;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16pt;
+    font-family: 'Trebuchet MS';
+}
+main {
+    background-color: lightblue;
+    color: darkslategrey;
+    margin: 0px;
+    padding: 20px;
+    font-size: 14pt;
+    font-family: 'Trebuchet MS';
+}
+a {
+    text-decoration: none;
+}
