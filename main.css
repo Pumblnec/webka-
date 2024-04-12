@@ -17,7 +17,7 @@ header {
 footer {
     background-color: maroon;
     color: bisque;
-    border-radius: 5px;
+
     margin: 0px;
     padding: 20px;
     text-align: right;
@@ -25,11 +25,15 @@ footer {
     font-style: italic;
     font-size: 16pt;
     font-family: 'Trebuchet MS';
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 main {
     background-color: bisque;
     color: black;
-    margin: 0px;
+    margin: 0px 0px 88px;
     padding: 20px;
     font-size: 14pt;
     font-family: 'Trebuchet MS';
@@ -70,6 +74,6 @@ div.menu {
 }
 
 div.menu:hover {
-    background-color: antiquewhite;
+    background-color: blanchedalmond;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.452);
 }
