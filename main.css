@@ -37,6 +37,7 @@ main {
 a {
     color: maroon;
     text-decoration: none;
+    transition: 1s 2s;
 }
 
 a:link {
@@ -53,6 +54,7 @@ a:hover {
     padding: 3px;
     border-radius: 5px;
     box-shadow: 7px 7px 3px #0002;
+    transition: 0.3s;
 }
 
 a:active {
