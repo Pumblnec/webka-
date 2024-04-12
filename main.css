@@ -1,12 +1,12 @@
 body {
-    background-color: lightblue;
-    color: maroon;
+    background-color: bisque;
+    color: black;
     font-family: Arial;
     margin: 0px;
 }
 header {
-    background-color: darkslateblue;
-    color: white;
+    background-color: maroon;
+    color: bisque;
     margin: 0px;
     padding: 20px;
     text-align: center;
@@ -15,8 +15,8 @@ header {
     font-family: 'Trebuchet MS';
 }
 footer {
-    background-color: darkslateblue;
-    color: white;
+    background-color: maroon;
+    color: bisque;
     border-radius: 5px;
     margin: 0px;
     padding: 20px;
@@ -27,8 +27,8 @@ footer {
     font-family: 'Trebuchet MS';
 }
 main {
-    background-color: lightblue;
-    color: darkslategrey;
+    background-color: bisque;
+    color: black;
     margin: 0px;
     padding: 20px;
     font-size: 14pt;
