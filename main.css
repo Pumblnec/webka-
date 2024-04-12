@@ -37,7 +37,7 @@ main {
 a {
     color: maroon;
     text-decoration: none;
-    transition: 1s 2s;
+    transition: 0.5s 1s;
 }
 
 a:link {
@@ -60,4 +60,16 @@ a:hover {
 a:active {
     border: 2px solid red;
     border-radius: 5px;
+}
+
+div.menu {
+    border: 5px solid rgba(128, 0, 0, 0.541);
+    border-radius: 5px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+div.menu:hover {
+    background-color: antiquewhite;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.452);
 }
