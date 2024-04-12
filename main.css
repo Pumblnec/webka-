@@ -35,5 +35,27 @@ main {
     font-family: 'Trebuchet MS';
 }
 a {
+    color: maroon;
     text-decoration: none;
+}
+
+a:link {
+    text-decoration: dotted;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: bisque;
+    background-color: maroon;
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: 7px 7px 3px #0002;
+}
+
+a:active {
+    border: 2px solid red;
+    border-radius: 5px;
 }
