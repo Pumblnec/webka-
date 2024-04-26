@@ -29,7 +29,8 @@
         }
 
         .position-static {
-            z-index: 5;
+            position: relative;
+            z-index: +2;
         }
 
         .position-relative {
@@ -37,10 +38,14 @@
             left: 130px;
             top: -150px;
             z-index: 0;
+            transition: 0.3s;
         }
 
         .position-relative:hover {
-            z-index: 6;
+            z-index: +6;
+            height: 90px;
+            width: 220px;
+            transition: 0.5s;
         }
 
         .position-absolute {
@@ -68,25 +73,25 @@
     </header>
 
     <main>
-        <div class="position-static">static</div>
+        <div class="position-static">"static"</div>
 
-        <div class=".position-static">static</div>
+        <div class="position-static">"static"</div>
         
         <div class="position-relative">relative</div>
         
-        <div class="position-static">static</div>
+        <div >static</div>
         
-        <div class="position-static">static</div>
+        <div>static</div>
         
         <div class="position-absolute">absolute</div>
         
-        <div class="position-static">static</div>
+        <div>static</div>
         
-        <div class="position-static">static</div>
+        <div>static</div>
         
-        <div class="position-static">static</div>
+        <div>static</div>
         
-        <div class="position-static">static</div>
+        <div>static</div>
     </main>
 
     <footer>
