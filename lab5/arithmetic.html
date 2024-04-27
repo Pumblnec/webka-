@@ -69,6 +69,12 @@
             alert(priv);
         }
 
+        function changeOutput () {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка 1';
+            output.style.backgroundColor = 'white';
+        }
+
         </script>
 
     <style>
@@ -101,6 +107,14 @@
             cursor: pointer;
         }
 
+        #output {
+            display: inline-block;
+            margin: 5px;
+            text-align: center;
+            border: 1px dotted;
+            width: 300px;
+            height: 40px;
+        }
     </style>
 
 </head>
@@ -123,6 +137,13 @@
                 <label>Первое число: <input type="number" value="1" id="numberA"><br></label>
                 <label>Второе число: <input type="number" value="1" id="numberB"><br></label>
             </div>
+            <div>
+                <input type="button" value="Кнопка 1" onclick = 'changeOutput()'>
+                <input type="button" value="Кнопка 2">
+                <input type="button" value="Кнопка 3">
+                <input type="button" value="Кнопка 4">
+            </div>
+            <div id="output"></div>
         </div> 
     </main>
 
