@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Варюхин Иван Алексеевич. Лабораторная 6
+    </title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-48x48.ico">
+    
+    <style>
+
+        .game {
+            background-color: blanchedalmond;
+            border-radius: 3px;
+            width: 300px;
+            border: 5px inset maroon;
+            text-align: center;
+            padding: 10px;
+            margin: 8px;
+            font-size: 20 px;
+            position: relative;
+            left: 755px;
+        }
+
+    </style>
+    <script>
+    function startgame (){
+        number = Math.random();
+    }
+
+
+    </script>
+</head>
+    
+<body>
+    
+    <header>
+        НГТУ. ФБ. Лабораторная работа 6
+        <hr>
+    </header>
+
+    <main>
+        <div>
+            <div class="game" onclick="startgame ()">
+                <button>
+                    Сыграть в игру 
+                </button>
+            </div>
+
+            <div class="game" style="display: none;">
+                <h1>Угадай число</h1>
+                <div>
+                    Задуманно число от 1 до 100. Угадайте какое?<br>
+                    <input type="number" value="" min="1" max="100"> <br>
+                    <button>Угадать</button>
+                    <div id="result"></div>
+                </div>
+            </div>
+
+            <div class="game" style="display: none;">
+                <h1>Поздравляю! Вы угадали!</h1>
+                <div>
+                    Задуманное число: <span id="number"></span>
+                </div>
+                
+                <div>
+                    Количество попыток: <span id="try-count"></span>
+                </div>
+                
+                <div>
+                    <button>Сыграть еще раз</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; Иван Варюхин, ФБИ-23, 2 курс, 2024
+    </footer>
+
+</body>
+
+</html>
