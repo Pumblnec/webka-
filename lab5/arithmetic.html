@@ -21,6 +21,21 @@
             alert('Сумма '+a+' и '+b+' равна: '+result);
         }
 
+        function showAuthor() {
+            let author = 'Автор работы: \nВарюхин Иван Алексеевич';
+            alert(author);
+        }
+
+        function headerSP () {
+            let SP = 'О, как же хорошо, что моя тима не в курсе \nЧто я делаю радик на AMа, как гений \nПока все думают, что я коплю battle fury \nЯ набиваю money, чтоб купить sacred relic, ведь я талант';
+            alert(SP);
+        } 
+
+        function privet () {
+            let priv = "АААААУУУУУУУ, АСАЛАМАЛЕЙКУМ !!!";
+            alert(priv);
+        }
+
         </script>
 
     <style>
@@ -36,11 +51,20 @@
                 box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.767);
                 transition: 0.7s;
                 text-align: center;
+                line-height: 45px;
             }
 
         .message:hover {
             padding: 5px;
             transition: 0.5s;
+        }
+
+        header {
+            cursor: pointer;
+        }
+
+        footer {
+            cursor: pointer;
         }
 
     </style>
@@ -49,17 +73,17 @@
     
 <body>
     
-    <header>
+    <header ondblclick="headerSP()">
         НГТУ. ФБ. Лабораторная работа 5
         <hr>
     </header>
 
     <main>
         <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="message">Узнать, кто автор страницы</div>
+        <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
     </main>
 
-    <footer>
+    <footer onclick="privet()">
         <hr>
         &copy; Иван Варюхин, ФБИ-23, 2 курс, 2024
     </footer>
