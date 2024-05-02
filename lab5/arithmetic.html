@@ -69,10 +69,12 @@
             alert(priv);
         }
 
-        function changeOutput () {
+        function changeOutput (buttomNum, backColor, textColor, borderSet) {
             let output = document.getElementById('output');
-            output.innerHTML = 'Нажата кнопка 1';
-            output.style.backgroundColor = 'white';
+            output.innerHTML = 'Нажата кнопка '+ buttomNum ;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.border = borderSet
         }
 
         </script>
@@ -138,10 +140,10 @@
                 <label>Второе число: <input type="number" value="1" id="numberB"><br></label>
             </div>
             <div>
-                <input type="button" value="Кнопка 1" onclick = 'changeOutput()'>
-                <input type="button" value="Кнопка 2">
-                <input type="button" value="Кнопка 3">
-                <input type="button" value="Кнопка 4">
+                <input type="button" value="Кнопка 1" onclick = 'changeOutput(1, "black" , "white", "5px outset white")'>
+                <input type="button" value="Кнопка 2" onclick = 'changeOutput(2, "orange" , "black", "5px outset black")'>
+                <input type="button" value="Кнопка 3" onclick = 'changeOutput(3, "maroon" , "yellow", "5px outset yellow")'>
+                <input type="button" value="Кнопка 4" onclick = 'changeOutput(4, "purple" , "lime", "5px outset lime")'>
             </div>
             <div id="output"></div>
         </div> 
