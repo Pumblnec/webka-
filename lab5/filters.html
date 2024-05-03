@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Варюхин Иван Алексеевич. Лабораторная 5
+    </title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-48x48.ico">
+    
+    <script>
+
+        function blurChange (){
+            let value = document.getElementById('blurValue').value + 'px';
+            document.getElementById('blurOutput').innerText = value;
+            document.getElementById('blurimage').style.filter = 'blur('+ value +')';
+        }
+
+        function saturateChange (){
+            let vvalue = document.getElementById('saturateValue').value + '%';
+            document.getElementById('saturateOutput').innerText = vvalue;
+            document.getElementById('blurimage').style.filter = 'saturate('+ vvalue + ')';
+        }
+
+    </script>
+
+    <style>
+
+        .blur {
+            width: 400px;
+            position: relative;
+            left: 500px;
+            top: 30px;
+        }
+
+        .ejic {
+            border: 1px outset black;
+            border-radius:10px;
+            box-shadow: 8px 15px 10px rgba(0, 0, 0, 0.418) ;
+            width: 900px;
+            position: absolute;
+            left: 500px;
+            top: 200px;
+        }
+
+    </style>
+
+</head>
+    
+<body>
+    
+    <header>
+        НГТУ. ФБ. Лабораторная работа 5
+        <hr>
+    </header>
+
+    <main>
+        <div class="blur">
+
+            Фильтр blur:
+            <input type="range" min="0" max="20" value="0" onchange="blurChange()" id="blurValue">
+            <span id="blurOutput"></span><br>
+
+
+            Фильтр saturate:
+            <input type="range" min="0" max="500" value="100" onchange="saturateChange()" id="saturateValue">
+            <span id="saturateOutput"></span>
+
+        </div>
+        <div><img src='ejic.jpg' id="blurimage" class="ejic"></div>
+
+    </main>
+
+    <footer>
+        <hr>
+        &copy; Иван Варюхин, ФБИ-23, 2 курс, 2024
+    </footer>
+
+</body>
+
+</html>
