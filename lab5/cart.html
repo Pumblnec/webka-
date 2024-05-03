@@ -26,9 +26,16 @@
             let or = parseInt(ValOrange.value);
             let result = ap*100 + pe*80 + me*300 + or*150;
             let sum = document.getElementById ('resSum')
-            sum.innerHTML = 'Общая сумма: '+result;
+            sum.innerHTML = 'Общая сумма: '+result+' руб.';
         }
 
+        function clearAll() {
+            document.getElementById('numApple').value = "";
+            document.getElementById('numPear').value = "";
+            document.getElementById('numMelon').value = "";
+            document.getElementById('numOrange').value = "";
+            document.getElementById('resSum').remove();
+        }
 
     </script>
 
@@ -77,25 +84,30 @@
         <div class="box">
                 <h1>Корзина товаров</h1>
             <div class="product">
+
                 <p><b>Яблоки <i style="opacity: 0.7;">(Стоимость 100руб. за шт.)</i></b></p>
 
-                <input type="number" value="" id="numApple" placeholder="Введите кол-во яблок" >
+                    <input type="number" value="" id="numApple" placeholder="Введите кол-во яблок" >
 
                 <p><b>Груши <i style="opacity: 0.7;">(Стоимость 80руб. за шт.)</i></b></p>
 
-                <input type="number" value="" id="numPear" placeholder="Введите кол-во груш">
+                    <input type="number" value="" id="numPear" placeholder="Введите кол-во груш">
 
                 <p><b>Апельсины <i style="opacity: 0.7;">(Стоимость 150руб. за шт.)</i></b></p>
 
-                <input type="number" value="" id="numOrange" placeholder="Введите кол-во апельсинов">
+                    <input type="number" value="" id="numOrange" placeholder="Введите кол-во апельсинов">
 
                 <p><b>Дыни <i style="opacity: 0.7;">(Стоимость 300руб. за шт.)</i></b></p>
 
-                <input type="number" value="" id="numMelon" placeholder="Введите кол-во дынь">
-            </div>
+                    <input type="number" value="" id="numMelon" placeholder="Введите кол-во дынь">
 
-                <div style="margin-left: 40px; margin-top: 40px;">
+            </div>
+                <div style="margin-left: 40px; margin-top: 20px;">
+                    <input type="button" value="Очистить" class="button" onclick="clearAll()"></div>
+
+                <div style="margin-left: 40px; margin-top: 20px;">
                     <input type="button" value="Рассчитать" class="button" onclick="showSum()"></div>
+
                 <div style="margin-left: 40px; margin-top: 20px;"   id= resSum></div>
             
 
