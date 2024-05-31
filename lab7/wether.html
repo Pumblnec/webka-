@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Варюхин Иван</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-48x48.icon">
+
+    <script>
+            function showWeather(){
+                const url = 'https://api.open-meteo.com/v1/forecast?latitude=55.0415&longitude=82.9346&hourly=temperature_2m&timezone=Asia%2FBangkok';
+                fetch(url)
+                    .then(function(response){
+                        return response.json();
+                    })
+                    .then(function(json){
+                        const hourlyTemperatures = json.hourly.temperature_2m;
+                        const today = new Date();
+                        const todayIndex = today.getHours() + today.getMinutes() / 60;
+                        const morningTemperature = hourlyTemperatures[Math.floor(todayIndex)];
+                        const noonTemperature = hourlyTemperatures[Math.floor(todayIndex + 4)];
+                        const eveningTemperature = hourlyTemperatures[Math.floor(todayIndex + 12)];
+                        showWeatherData(morningTemperature, noonTemperature, eveningTemperature);
+                    })
+
+            }
+
+            function showWeatherData(morningTemperature, noonTemperature, eveningTemperature) {
+                const weatherElement = document.createElement('div');
+                weatherElement.classList.add('weather');
+                weatherElement.innerHTML = `
+                    <p>Температура в Новосибирске на сегодня:</p>
+                    <p>8:00 утро: ${morningTemperature} °C</p>
+                    <p>12:00 полдень: ${noonTemperature} °C</p>
+                    <p>20:00 вечер: ${eveningTemperature} °C</p>`;
+                document.body.appendChild(weatherElement);
+            }
+    </script>
+
+    <style>
+        .weather {
+            padding: 20px;
+            border: 5px outset maroon;
+            border-radius: 15px;
+            background-color: papayawhip;
+            text-align: center;
+            font-size: 14pt;
+            margin: 37% left;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        НГТУ ФБ, Лабораторная работа 6
+    </header>
+
+    <main>
+
+        <button onclick="showWeather()" style="border: 3px inset maroon; border-radius: 5px; background-color: rgb(250, 243, 233); padding: 15px 25px; font-size: 14pt;">
+         Получить прогноз погоды</button>
+    </main> 
+
+    <footer>
+        &copy; Варюхин Иван, ФБИ-23, 2 курс, 2024 
+    </footer>
+</body>
+</html>
